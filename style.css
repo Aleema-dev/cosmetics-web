@@ -184,16 +184,33 @@ footer span {
   font-size: 14px;
   opacity: 0.6;
 }
-.product-grid{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:20px;
+.product-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
-.product-card{
-    width:90%;
-    margin:10px 0;
+
+.card, .product-card {
+    width: 300px;
+    text-align: center;
 }
-h2{
-    font-size:1.8rem;
+
+.card img, .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+    }
+
+    .card, .product-card {
+        width: 90%;
+    }
 }
